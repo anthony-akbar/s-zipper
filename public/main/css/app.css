@@ -3,6 +3,19 @@
 .navbar-scroll .navbar-toggler .fa-bars {
     color: #fff;
 }
+.zoom-in{
+    animation: zoom-in 1s ease-out;
+}
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
 
 /* Color of the links AFTER scroll */
 .navbar-scrolled .nav-link,
