@@ -205,9 +205,105 @@
                     </div>
                 </div>
             </div>
+            <div class="container d-flex" style="height: 50%">
+                <div class="row">
+                    <div class="from-left col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="down-to-up col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="from-right col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="container" style="height: 50%">
+                <div class="row">
+                    <div class="from-left col-md-6">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="from-right col-md-6">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="container">
+                <div class="row">
+                    <div class="from-left col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="up-to-down col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="from-right col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="from-left col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="down-to-up col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                    <div class="from-right col-md-4">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
+                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
+                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div style="height: 200vh">
+    </div>
+    <div style="height: 200px">
 
     </div>
 @endsection

@@ -5,7 +5,50 @@
 }
 
 .zoom-in {
-    animation: zoom-in 1s ease-out;
+    animation: zoom-in 1s normal forwards ease-in-out;
+}
+
+.col-md-4.active {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(0px);
+}
+.col-md-6.active {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(0px);
+}
+
+@keyframes real {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+.from-left {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.from-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.up-to-down {
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.down-to-up {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
 }
 
 @keyframes zoom-in {
@@ -35,7 +78,8 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-    /* CSS */
+
+/* CSS */
 .button-28 {
     appearance: none;
     background-color: transparent;
