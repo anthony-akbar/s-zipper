@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('/main/css/mdb.lite.css') }}">
     <link rel="stylesheet" href="{{ asset('/main/css/style.css') }}">
 </head>
-<body onscroll="onScroll()">
+<body style="background-color: black">
 @include('partials.navbar')
 @yield('content')
 <script type="text/javascript" src="{{ asset('/main/js/bootstrap.js')}}"></script>

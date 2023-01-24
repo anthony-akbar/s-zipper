@@ -4,7 +4,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item {{ request()->is('/') ? "active" : "" }}">
                     <a class="nav-link" href="#">Home</a>
@@ -16,6 +16,9 @@
                     <a class="nav-link" href="#">Gallery</a>
                 </li>
             </ul>
+            <div class="nav-item">
+                 <a class ="nav-link button-28" role="button"> Button 28 </a>
+            </div>
             <div class="nav-link my-2 my-lg-0">
                 info@s-zipper.uz
             </div>
