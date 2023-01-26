@@ -1,4 +1,4 @@
-<header class="header-fixed static-page-header">
+<header class="header-fixed">
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 col-md-4">
