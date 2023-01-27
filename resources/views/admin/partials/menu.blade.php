@@ -7,10 +7,10 @@
             </a>
         </li>
         <li>
-            <a href="{{ route("admin.articles") }}"
+            <a href="{{ route("admin.slider") }}"
                class="side-menu side-menu{{ request()->is("admin/articles") || request()->is("admin/articles/*") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="align-justify"></i></div>
-                <div class="side-menu__title">Articles</div>
+                <div class="side-menu__title">Sliders</div>
             </a>
         </li>
         <li>

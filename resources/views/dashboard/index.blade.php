@@ -124,48 +124,18 @@
 
         <div class="main-slider-container">
             <div class="main-slider owl-carousel owl-loaded owl-drag">
-
                 <div class="owl-stage-outer">
                     <div class="owl-stage"
                          style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-                                                <div class="owl-item cloned" style="width: 1440px;"><a href="/">
-                                                        <div class="item"
-                                                             style="background-image: url(/assets/uploads/zipper.jpeg)"></div>
-                                                    </a></div>
-                                                <div class="owl-item cloned" style="width: 1440px;"><a href="#">
-                                                        <div class="item">
-                                                            <video autoplay="" loop="" muted="" style="width: 100%;height: auto;">
-                                                                <source src="/assets/front-face/img/core-img/videos/tiny-fim-slider.mp4"
-                                                                        type="video/mp4">
-                                                                <source src="/assets/front-face/img/core-img/videos/fim-slider.ogm"
-                                                                        type="video/ogg">
-                                                            </video>
-                                                            <div class="overlay"></div>
-                                                        </div>
-                                                    </a></div>
-                                                <div class="owl-item" style="width: 1440px;"><a href="/">
-                                                        <div class="item"
-                                                             style="background-image: url(/assets/uploads/zipper.jpeg)"></div>
-                                                    </a></div>
-                                                <div class="owl-item" style="width: 1440px;"><a href="/">
-                                                        <div class="item"
-                                                             style="background-image: url(/assets/uploads/zipper2.jpeg)"></div>
-                                                    </a></div>
-                                                <div class="owl-item active" style="width: 1440px;"><a href="/">
-                                                        <div class="item"
-                                                             style="background-image: url(/assets/uploads/zipper3.jpeg)"></div>
-                                                    </a></div>
-                                                <div class="owl-item" style="width: 1440px;"><a href="#">
-                                                        <div class="item">
-                                                            <video autoplay="" loop="" muted="" style="width: 100%;height: auto;">
-                                                                <source src="/assets/front-face/img/core-img/videos/tiny-fim-slider.mp4"
-                                                                        type="video/mp4">
-                                                                <source src="/assets/front-face/img/core-img/videos/fim-slider.ogm"
-                                                                        type="video/ogg">
-                                                            </video>
-                                                            <div class="overlay"></div>
-                                                        </div>
-                                                    </a></div>
+                        @foreach($sliders as $item)
+                            <div class="owl-item">
+                                <a href="#">
+                                    <div class="item">
+                                        <img class="item"  src="{{ 'storage/' . $item->image }}"/>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                     <div class="owl-nav disabled">
                         <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span>
@@ -175,1111 +145,1113 @@
                     </div>
                 </div>
             </div>
-            <section class="zip-categories">
-                <section class="inner-section">
-                    <div class="container-fluid">
-                        <div class="category-item row">
-                            <div class="col-md-12">
-                                <div class="section-heading primary">
-                                    <h2>ZIPPER TYPES</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        </div>
 
-
-                <section class="inner-section mb-5">
-                    <div class="container-fluid">
-                        <div class="category-item row">
-                            <div class="col-md-7">
-                                <div class="category-card align-bottom">
-                                    <a href="/metal-fermuarlar">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <div class="card-content d-none">
-                                        <a href="/metal-fermuarlar">
-                                            <h3 class="secondary">METAL ZIPPERS</h3>
-                                        </a>
-                                        <div class="invisible-content">
-                                            <!--<h5 class="mb-4">POPULAR METAL ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                    href="/m2-metal-fermuarlar">M2 METAL ZIPPERS</a></h6><h6
-                                                class="mb-3"><a
-                                                    href="/m4-metal-fermuarlar">M4 METAL ZIPPERS</a></h6><h6
-                                                class="mb-3"><a
-                                                    href="/m4-fimx-metal-fermuarlar">M4 FIMX METAL ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a href="/m5-metal-fermuarlar">M5 METAL ZIPPERS</a></h6>
-                                            <a href="/metal-fermuarlar" class="button-link d-inline-block mt-3">view all
-                                                <i
-                                                    class="flaticon-right ml-2"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-5 text-right pt-md-5">
-                                <div class="category-content">
-                                    <a href="/metal-fermuarlar">
-                                        <h3>METAL ZIPPERS</h3>
-                                    </a>
-                                    <p>Metal zippers are a zipper type the teeth of which are produced from various
-                                        metal
-                                        resources. They have a structure which can endure every kind of challenging
-                                        conditions
-                                        and environments. Metal zippers are commonly used in jeans, leather, sportswear
-                                        and
-                                        similar industries.
-                                    </p>
-                                </div>
-                                <div class="category-images">
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper2.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper3.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="inner-section mt-5 mb-5">
-                    <div class="container-fluid">
-                        <div class="category-item row">
-                            <div class="col-md-5 pt-md-5">
-                                <div class="category-content">
-                                    <a href="/kemik-fermuarlar">
-                                        <h3>DELRIN ZIPPERS</h3>
-                                    </a>
-                                    <p>Delrin zippers are a zipper type made by injecting polyacetal material into the
-                                        zipper
-                                        lines. The usage fields of delrin teethed zippers are usually clothes such as
-                                        coats,
-                                        jackets, raincoats, tracksuits.
-                                    </p>
-                                </div>
-                                <div class="category-images">
-                                    <a class="fancybox-group" rel="zipCategory-23"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5ebac69ec7fa20848435c76c51f34bc5-664.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="DELRIN ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-23"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/97134d8651f3bf317566fa040fc18578-673.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="DELRIN ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-23"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/c4cfbb688297013bf83ba50f50e59713-674.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="DELRIN ZIPPERS" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="category-card align-bottom">
-                                    <a href="/kemik-fermuarlar">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="DELRIN ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <div class="card-content d-none">
-                                        <a href="/kemik-fermuarlar">
-                                            <h3 class="secondary">DELRIN ZIPPERS</h3>
-                                        </a>
-                                        <div class="invisible-content">
-                                            <!--<h5 class="mb-4">POPULAR DELRIN ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                    href="/d3-kemik-fermuarlar">D3 DELRIN ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a
-                                                    href="/d5-kemik-fermuarlar">D5 DELRIN ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a
-                                                    href="/d10-kemik-fermuarlar">D10 DELRIN ZIPPERS</a></h6>
-                                            <a href="/kemik-fermuarlar" class="button-link d-inline-block mt-3">view all
-                                                <i
-                                                    class="flaticon-right ml-2"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="inner-section mb-5">
-                    <div class="container-fluid">
-                        <div class="category-item row">
-                            <div class="col-md-7">
-                                <div class="category-card align-bottom">
-                                    <a href="/naylon-fermuarlar">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="NYLON ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <div class="card-content d-none">
-                                        <a href="/naylon-fermuarlar">
-                                            <h3 class="secondary">NYLON ZIPPERS</h3>
-                                        </a>
-                                        <div class="invisible-content">
-                                            <!--<h5 class="mb-4">POPULAR NYLON ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                    href="/n3-naylon-fermuarlar">N3 NYLON ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a
-                                                    href="/n5-naylon-fermuarlar">N5 NYLON ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a
-                                                    href="/n7-naylon-fermuarlar">N7 NYLON ZIPPERS</a></h6><h6
-                                                class="mb-3">
-                                                <a
-                                                    href="/gizli-fermuar">INVISIBLE ZIPPERS</a></h6>
-                                            <a href="/naylon-fermuarlar" class="button-link d-inline-block mt-3">view
-                                                all <i
-                                                    class="flaticon-right ml-2"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-5 text-right pt-md-5">
-                                <div class="category-content">
-                                    <a href="/naylon-fermuarlar">
-                                        <h3>NYLON ZIPPERS</h3>
-                                    </a>
-                                    <p>Nylon zippers are a zipper type the teeth of which are produced by using spiral
-                                        nylon
-                                        monofilament material. Nylon zippers are especially used for babies’ wear,
-                                        children’s
-                                        wear and women’s wear.
-                                    </p>
-                                </div>
-                                <div class="category-images">
-                                    <a class="fancybox-group" rel="zipCategory-25"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/12f37c568556ede835bd05dd54a90936-666.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="NYLON ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-25"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/31638223a056facdd004df3c632fbdb4-672.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="NYLON ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-25"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5647cf3ac39431b3dff67185ee3bfd4d-671.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="NYLON ZIPPERS" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <section class="innovations">
+        <section class="zip-categories">
+            <section class="inner-section">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="category-item row">
                         <div class="col-md-12">
                             <div class="section-heading primary">
-                                <h2>INNOVATIONS</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="innovations-slider-container">
-                                <div class="slider-left">
-                                    <h2>WE PRODUCE FORMULA-1 ZIPPERS</h2>
-                                    <p>Fim Zipper's products are now in the racing pilot overalls of Formula 1, the
-                                        world's
-                                        most
-                                        expensive and most watched sports organization.</p>
-                                    <a href="/formula1-fermuarlarini-uretiyoruz" class="button black size-sm">CHECK
-                                        NOW</a>
-                                </div>
-                                <div class="slider-right">
-                                    <!--
-                                    <div class="innovations-slider owl-carousel">
-                                        <div><img src="/uploads/blogs/thumb/800x500/cb506e10b5c983fafd04bfe93a922a27-1258.jpg" alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>						</div>
-                                    -->
-
-                                    <div><img class="img-fluid w-100"
-                                              src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                              alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>
-                                </div>
+                                <h2>ZIPPER TYPES</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="fim-design">
+
+            <section class="inner-section mb-5">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="fim-design-about">
-                                <div class="fim-design-about">
-                                    <iframe class="mb-4" src="https://www.youtube.com/embed/q6-iDGFD40E?autoplay=1"
-                                            frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                                    <div class="section-heading primary">
-                                        <h2>FİM DİZAYN</h2>
+                    <div class="category-item row">
+                        <div class="col-md-7">
+                            <div class="category-card align-bottom">
+                                <a href="/metal-fermuarlar">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="METAL ZIPPERS" class="img-fluid">
+                                </a>
+                                <div class="card-content d-none">
+                                    <a href="/metal-fermuarlar">
+                                        <h3 class="secondary">METAL ZIPPERS</h3>
+                                    </a>
+                                    <div class="invisible-content">
+                                        <!--<h5 class="mb-4">POPULAR METAL ZIPPERS</h5>--><h6 class="mb-3"><a
+                                                href="/m2-metal-fermuarlar">M2 METAL ZIPPERS</a></h6><h6
+                                            class="mb-3"><a
+                                                href="/m4-metal-fermuarlar">M4 METAL ZIPPERS</a></h6><h6
+                                            class="mb-3"><a
+                                                href="/m4-fimx-metal-fermuarlar">M4 FIMX METAL ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a href="/m5-metal-fermuarlar">M5 METAL ZIPPERS</a></h6>
+                                        <a href="/metal-fermuarlar" class="button-link d-inline-block mt-3">view all
+                                            <i
+                                                class="flaticon-right ml-2"></i></a>
                                     </div>
-                                    <h2 class="firsth">HAVE YOU EVER</h2>
-                                    <h2 class="secondh">DESIGNED YOUR <span>OWN</span> ZIPPERS BEFORE?</h2>
-                                    <p>With the new project of Fim Fermuar, FimDizayn, you can design your own zippers
-                                        and
-                                        send
-                                        it to us. We will manufacture it just as you want them to be!</p>
-                                    <strong> It is time to create your own zippers! </strong> <a class="button-link"
-                                                                                                 href="https://fimdizayn.com/en"
-                                                                                                 target="_blank"
-                                                                                                 rel="noopener">
-                                        <img class="img-fluid"
-                                             src="/assets/front-face/img/core-img/sections/fim-design/button.svg"/>
-                                        <span>DESIGN IT</span> </a><a class="button black size-sm m-auto"
-                                                                      href="https://fimdizayn.com/en" target="_blank"
-                                                                      rel="noopener">DESIGN NOW</a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 offset-md-1">
-                            <div class="fim-design-preview">
-                                <div class="fimdizayn-carousel owl-carousel">
-                                    <div class="item"><img
-                                            src="{{asset('assets/uploads/fimdizayn-2-en.jpeg')}}"></div>
-                                    <div class="item"><img
-                                            src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>
-                                    <div class="item"><img
-                                            src="{{asset('assets/uploads/fimdizayn--en.jpeg')}}"></div>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-md-5 text-right pt-md-5">
+                            <div class="category-content">
+                                <a href="/metal-fermuarlar">
+                                    <h3>METAL ZIPPERS</h3>
+                                </a>
+                                <p>Metal zippers are a zipper type the teeth of which are produced from various
+                                    metal
+                                    resources. They have a structure which can endure every kind of challenging
+                                    conditions
+                                    and environments. Metal zippers are commonly used in jeans, leather, sportswear
+                                    and
+                                    similar industries.
+                                </p>
+                            </div>
+                            <div class="category-images">
+                                <a class="fancybox-group" rel="zipCategory-24"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="METAL ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-24"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper2.jpeg')}}"
+                                        alt="METAL ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-24"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper3.jpeg')}}"
+                                        alt="METAL ZIPPERS" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-
-            <section class="zip-parts">
+            <section class="inner-section mt-5 mb-5">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-heading primary">
-                                <h2>ZIPPER COMPONENTS</h2>
+                    <div class="category-item row">
+                        <div class="col-md-5 pt-md-5">
+                            <div class="category-content">
+                                <a href="/kemik-fermuarlar">
+                                    <h3>DELRIN ZIPPERS</h3>
+                                </a>
+                                <p>Delrin zippers are a zipper type made by injecting polyacetal material into the
+                                    zipper
+                                    lines. The usage fields of delrin teethed zippers are usually clothes such as
+                                    coats,
+                                    jackets, raincoats, tracksuits.
+                                </p>
+                            </div>
+                            <div class="category-images">
+                                <a class="fancybox-group" rel="zipCategory-23"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5ebac69ec7fa20848435c76c51f34bc5-664.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="DELRIN ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-23"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/97134d8651f3bf317566fa040fc18578-673.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="DELRIN ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-23"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/c4cfbb688297013bf83ba50f50e59713-674.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="DELRIN ZIPPERS" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="category-card align-bottom">
+                                <a href="/kemik-fermuarlar">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="DELRIN ZIPPERS" class="img-fluid">
+                                </a>
+                                <div class="card-content d-none">
+                                    <a href="/kemik-fermuarlar">
+                                        <h3 class="secondary">DELRIN ZIPPERS</h3>
+                                    </a>
+                                    <div class="invisible-content">
+                                        <!--<h5 class="mb-4">POPULAR DELRIN ZIPPERS</h5>--><h6 class="mb-3"><a
+                                                href="/d3-kemik-fermuarlar">D3 DELRIN ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a
+                                                href="/d5-kemik-fermuarlar">D5 DELRIN ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a
+                                                href="/d10-kemik-fermuarlar">D10 DELRIN ZIPPERS</a></h6>
+                                        <a href="/kemik-fermuarlar" class="button-link d-inline-block mt-3">view all
+                                            <i
+                                                class="flaticon-right ml-2"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <section class="inner-section category-products">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="secondary mb-0 pb-0">ZIPPER</h4>
-                            </div>
-                            <div class="col-12">
-                                <div class="category-product-carousel product-list owl-carousel">
-                                    <div class="product-card">
-                                        <a href="/m2-dipli-gu-mu-s-dis">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="M2 CLOSED END SILVER TEETH " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M2 CLOSED END SILVER TEETH
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">M2-002</span>
-                                                <a href="/m2-dipli-gu-mu-s-dis" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m2-separe-gu-mu-s-dis">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="M2 OPEN END SILVER TEETH " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M2 OPEN END SILVER TEETH
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">M2-003</span>
-                                                <a href="/m2-separe-gu-mu-s-dis" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m2-x-tipi-gu-mu-s-dis">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="M2 X TYPE SILVER TEETH " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M2 X TYPE SILVER TEETH
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">M2-004</span>
-                                                <a href="/m2-x-tipi-gu-mu-s-dis" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m2-o-tipi-gu-mu-s-dis">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="M2 O TYPE SILVER TEETH " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M2 O TYPE SILVER TEETH
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">M2-001</span>
-                                                <a href="/m2-o-tipi-gu-mu-s-dis" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="/fermuar" class="button-link d-inline-block float-right mt-1 mt-md-5">view all
-                                    <i
-                                        class="flaticon-right ml-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="inner-section category-products">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="secondary mb-0 pb-0">PULLERS</h4>
-                            </div>
-                            <div class="col-12">
-                                <div class="category-product-carousel product-list owl-carousel">
-                                    <div class="product-card">
-                                        <a href="/fi-m-101">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 101" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 101
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">ELC-001</span>
-                                                <a href="/fi-m-101" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-310">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="FİM 310" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 310
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 310</span>
-                                                <a href="/fim-310" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-309">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 309" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 309
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 309</span>
-                                                <a href="/fim-309" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-308">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="FİM 308" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 308
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 308</span>
-                                                <a href="/fim-308" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-307">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 307" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 307
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 307</span>
-                                                <a href="/fim-307" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-306">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="FİM 306" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 306
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 306</span>
-                                                <a href="/fim-306" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fim-305">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 305" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 305
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">FİM 305</span>
-                                                <a href="/fim-305" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fi-m-102">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 102" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 102
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">ELC-002</span>
-                                                <a href="/fi-m-102" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fi-m-103">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="FİM 103" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 103
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">ELC-003</span>
-                                                <a href="/fi-m-103" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/fi-m-104">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="FİM 104" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                FİM 104
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">ELC-004</span>
-                                                <a href="/fi-m-104" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="/elcikler" class="button-link d-inline-block float-right mt-1 mt-md-5">view all
-                                    <i
-                                        class="flaticon-right ml-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="inner-section category-products">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="secondary mb-0 pb-0">SLIDERS</h4>
-                            </div>
-                            <div class="col-12">
-                                <div class="category-product-carousel product-list owl-carousel">
-                                    <div class="product-card">
-                                        <a href="/m8-otomatik">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="M8 AUTOLOCK" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M8 AUTOLOCK
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-042</span>
-                                                <a href="/m8-otomatik" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-yg-kibris-du-z">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product2.png')}}"
-                                                    alt="N3 YG " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 YG
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-050</span>
-                                                <a href="/n3-yg-kibris-du-z" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-otomatik">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 AUTOLOCK" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 AUTOLOCK
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-049</span>
-                                                <a href="/n3-otomatik" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-mac-a">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 HANGER " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 HANGER
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-048</span>
-                                                <a href="/n3-mac-a" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-ko-pru">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 NON-LOCK" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 NON-LOCK
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-047</span>
-                                                <a href="/n3-ko-pru" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-kombi-go-ru-nu-m">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 ELIPTICAL " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 ELIPTICAL
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-046</span>
-                                                <a href="/n3-kombi-go-ru-nu-m" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-kanca">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 HOOK" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 HOOK
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-045</span>
-                                                <a href="/n3-kanca" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/n3-go-vde">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="N3 BODY" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                N3 BODY
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-044</span>
-                                                <a href="/n3-go-vde" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m15-go-vde">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="M15 BODY" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M15 BODY
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-043</span>
-                                                <a href="/m15-go-vde" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m5-mac-a">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="{{asset('assets/uploads/products/product.png')}}"
-                                                    alt="M5 HANGER" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M5 HANGER
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">KRS-036</span>
-                                                <a href="/m5-mac-a" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="/kursorler" class="button-link d-inline-block float-right mt-1 mt-md-5">view
-                                    all <i
-                                        class="flaticon-right ml-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="inner-section category-products">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="secondary mb-0 pb-0">KITS</h4>
-                            </div>
-                            <div class="col-12">
-                                <div class="category-product-carousel product-list owl-carousel">
-                                    <div class="product-card">
-                                        <a href="/m4-kelebek-h-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/e72a846c738c269ad82e2e910afc0f1f-353.png"
-                                                    alt="M4 KELEBEK H STOP" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M4 KELEBEK H STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-001</span>
-                                                <a href="/m4-kelebek-h-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m4-ust-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/319aca54598db2d96a49a04754d2f771-354.png"
-                                                    alt="M4 TOP STOP " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M4 TOP STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-002</span>
-                                                <a href="/m4-ust-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m5-kelebek-h-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/1287f9530b09a17ef99fe811be26c189-355.png"
-                                                    alt="M5 BUTTERFLY H STOP" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M5 BUTTERFLY H STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-003</span>
-                                                <a href="/m5-kelebek-h-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m5-n5-alt-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/f704a71e95c339952f0ead00bb5ce17a-357.png"
-                                                    alt="M5-N5 BOTTOM STOP" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M5-N5 BOTTOM STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-005</span>
-                                                <a href="/m5-n5-alt-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m5-ust-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/0e2e4c1393744b059651b21c054f1e28-356.png"
-                                                    alt="M5 TOP STOP" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M5 TOP STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-004</span>
-                                                <a href="/m5-ust-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/no-4-kapak-yay">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/0ba9419304754d4d28faf0806aec762c-359.png"
-                                                    alt="NO 4 CUP-SPRING" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                NO 4 CUP-SPRING
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-007</span>
-                                                <a href="/no-4-kapak-yay" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/no-5-kapak-yay">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/a035dd90719202a046f081d273f92ed0-360.png"
-                                                    alt="NO 5 CUP-SPRING" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                NO 5 CUP-SPRING
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-008</span>
-                                                <a href="/no-5-kapak-yay" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/no-8-kapak-yay">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/42bac264d48c7a95ab6d3b0fe0cfd81d-361.png"
-                                                    alt="NO 8 CUP-SPRING" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                NO 8 CUP-SPRING
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-009</span>
-                                                <a href="/no-8-kapak-yay" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m8-kelebek-h-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/2bc20c1b1024e52cf049bd6e889d2d00-859.png"
-                                                    alt="M8 BUTTERFLY H STOP " class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M8 BUTTERFLY H STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-010	</span>
-                                                <a href="/m8-kelebek-h-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="product-card">
-                                        <a href="/m15-kelebek-h-stop">
-                                            <div class="img-holder">
-                                                <img
-                                                    src="/uploads/products/thumb/400x600/cb677613af466e72a4ec41fdabfe3042-358.png"
-                                                    alt="M15 BUTTERFLY H STOP" class="img-fluid">
-                                            </div>
-                                            <div class="product-name">
-                                                M15 BUTTERFLY H STOP
-                                            </div>
-                                            <div class="product-bottom">
-                                                <span class="product-code">APRT-006</span>
-                                                <a href="/m15-kelebek-h-stop" class="button black size-sm">CHECK</a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="/aparatlar" class="button-link d-inline-block float-right mt-1 mt-md-5">view
-                                    all <i
-                                        class="flaticon-right ml-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </section>
-            <section class="fairs">
+            <section class="inner-section mb-5">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-heading primary">
-                                <h2>FAIRS</h2>
+                    <div class="category-item row">
+                        <div class="col-md-7">
+                            <div class="category-card align-bottom">
+                                <a href="/naylon-fermuarlar">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="NYLON ZIPPERS" class="img-fluid">
+                                </a>
+                                <div class="card-content d-none">
+                                    <a href="/naylon-fermuarlar">
+                                        <h3 class="secondary">NYLON ZIPPERS</h3>
+                                    </a>
+                                    <div class="invisible-content">
+                                        <!--<h5 class="mb-4">POPULAR NYLON ZIPPERS</h5>--><h6 class="mb-3"><a
+                                                href="/n3-naylon-fermuarlar">N3 NYLON ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a
+                                                href="/n5-naylon-fermuarlar">N5 NYLON ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a
+                                                href="/n7-naylon-fermuarlar">N7 NYLON ZIPPERS</a></h6><h6
+                                            class="mb-3">
+                                            <a
+                                                href="/gizli-fermuar">INVISIBLE ZIPPERS</a></h6>
+                                        <a href="/naylon-fermuarlar" class="button-link d-inline-block mt-3">view
+                                            all <i
+                                                class="flaticon-right ml-2"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-md fair-item"><a
-                                href="/bursa-8-tekstil-aksesuarlari-trend-ve-inovasyon-etkinligi"> <img
-                                    class="img-fluid"
-                                    src="/uploads/editor/source/bursa-fair.jpg"
-                                    alt="Bursa 8. Tekstil Aksesuarı Trend ve İnovasyon Fuarı"/>
-                            </a>
-                            <div>
-                                <h5 class="mt-2">Bursa</h5>
+                        <div class="col-md-5 text-right pt-md-5">
+                            <div class="category-content">
+                                <a href="/naylon-fermuarlar">
+                                    <h3>NYLON ZIPPERS</h3>
+                                </a>
+                                <p>Nylon zippers are a zipper type the teeth of which are produced by using spiral
+                                    nylon
+                                    monofilament material. Nylon zippers are especially used for babies’ wear,
+                                    children’s
+                                    wear and women’s wear.
+                                </p>
+                            </div>
+                            <div class="category-images">
+                                <a class="fancybox-group" rel="zipCategory-25"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/12f37c568556ede835bd05dd54a90936-666.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="NYLON ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-25"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/31638223a056facdd004df3c632fbdb4-672.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="NYLON ZIPPERS" class="img-fluid">
+                                </a>
+                                <a class="fancybox-group" rel="zipCategory-25"
+                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5647cf3ac39431b3dff67185ee3bfd4d-671.jpg">
+                                    <img
+                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                        alt="NYLON ZIPPERS" class="img-fluid">
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4 col-md fair-item"><a href="/texhibition-istanbul-fuari"> <img
-                                    class="img-fluid"
-                                    src="/uploads/editor/source/texhibition.jpg"
-                                    alt="Texhibition Fuarı"/>
-                            </a>
-                            <div>
-                                <h5 class="mt-2">İstanbul</h5>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md fair-item"><a href="/uluslar-arasi-kahire-moda-ve-tekstil-fuari"> <img
-                                    class="img-fluid" src="/uploads/editor/source/mısır.jpg" alt="Mısır Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">Mısır</h5>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md fair-item"><a href="/rusya-ndash-intertex-fabric-textile-fuari"> <img
-                                    class="img-fluid" src="/uploads/editor/source/rusya.jpg" alt="Rusya Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">Rusya</h5>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md fair-item"><a href="/tunus-intertex-tunusia-sousse-fuari"> <img
-                                    class="img-fluid" src="/uploads/editor/source/tunus.jpg" alt="Tunus Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">Tunus</h5>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md fair-item"><a href="/polonya-nbsp-nbsp-innovetex-2014-tekstil-fuari">
-                                <img
-                                    class="img-fluid" src="/uploads/editor/source/polonya.png" alt="Polonya Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">Polonya</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-md fair-item mt-5"><a
-                                href="/sirbistan-nbsp-belgrad-balkan-textile-2018-fuari">
-                                <img class="img-fluid" src="/uploads/editor/source/sirbistan.jpg"
-                                     alt="Sırbistan Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">Sırbistan</h5>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md fair-item mt-5"><a href="/istanbul-kysd-tekstil-ve-inovasyon-fuari">
-                                <img
-                                    class="img-fluid" src="/uploads/editor/source/istanbul.jpg"
-                                    alt="İstanbul Fuarı"/></a>
-                            <div>
-                                <h5 class="mt-2">İstanbul</h5>
-                            </div>
-                        </div>
-                        <div class="col-md">&nbsp;</div>
-                        <div class="col-md">&nbsp;</div>
-                        <div class="col-md">&nbsp;</div>
-                        <div class="col-md">&nbsp;</div>
                     </div>
                 </div>
             </section>
+        </section>
 
-            <section class="production">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-heading primary">
-                                <h2>PRODUCTION</h2>
-                            </div>
-                            <p>The number of hands employed to manufacture a zipper is as many as the resources required
-                                to
-                                be
-                                combined to produce it. A zipper can be produced with the cooperation of approximately
-                                27
-                                people. Both the heat and the coldness are used for the production process of a zipper
-                                which
-                                is
-                                manufactured from 5 different resources.</p>
+        <section class="innovations">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading primary">
+                            <h2>INNOVATIONS</h2>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="video">
-                <span class="play-button" data-toggle="modal" data-target=".video-modal"></span>
-                <img class="img-fluid" src="/assets/front-face/img/core-img/production/cover.jpg"
-                     alt="&Uuml;retim S&uuml;reci Videosu"/> <span data-toggle="modal"
-                                                                   data-target=".video-modal"></span>
-            </section>
-            <div class="modal fade bd-example-modal-lg video-modal" tabindex="-1" role="dialog"
-                 aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <video controls="controls">
-                            <source src="/assets/front-face/img/core-img/production/production.mp4" type="video/mp4"/>
-                        </video>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="innovations-slider-container">
+                            <div class="slider-left">
+                                <h2>WE PRODUCE FORMULA-1 ZIPPERS</h2>
+                                <p>Fim Zipper's products are now in the racing pilot overalls of Formula 1, the
+                                    world's
+                                    most
+                                    expensive and most watched sports organization.</p>
+                                <a href="/formula1-fermuarlarini-uretiyoruz" class="button black size-sm">CHECK
+                                    NOW</a>
+                            </div>
+                            <div class="slider-right">
+                                <!--
+                                <div class="innovations-slider owl-carousel">
+                                    <div><img src="/uploads/blogs/thumb/800x500/cb506e10b5c983fafd04bfe93a922a27-1258.jpg" alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>						</div>
+                                -->
+
+                                <div><img class="img-fluid w-100"
+                                          src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                          alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <section class="form">
-                <div class="container-fluid">
-                    <div class="section-heading primary">
-                        <h2>REQUEST FORM</h2>
+        </section>
+
+        <section class="fim-design">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="fim-design-about">
+                            <div class="fim-design-about">
+                                <iframe class="mb-4" src="https://www.youtube.com/embed/q6-iDGFD40E?autoplay=1"
+                                        frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                                <div class="section-heading primary">
+                                    <h2>FİM DİZAYN</h2>
+                                </div>
+                                <h2 class="firsth">HAVE YOU EVER</h2>
+                                <h2 class="secondh">DESIGNED YOUR <span>OWN</span> ZIPPERS BEFORE?</h2>
+                                <p>With the new project of Fim Fermuar, FimDizayn, you can design your own zippers
+                                    and
+                                    send
+                                    it to us. We will manufacture it just as you want them to be!</p>
+                                <strong> It is time to create your own zippers! </strong> <a class="button-link"
+                                                                                             href="https://fimdizayn.com/en"
+                                                                                             target="_blank"
+                                                                                             rel="noopener">
+                                    <img class="img-fluid"
+                                         src="/assets/front-face/img/core-img/sections/fim-design/button.svg"/>
+                                    <span>DESIGN IT</span> </a><a class="button black size-sm m-auto"
+                                                                  href="https://fimdizayn.com/en" target="_blank"
+                                                                  rel="noopener">DESIGN NOW</a></div>
+                        </div>
                     </div>
-                    <form class="ajax-form" action="customerController" method="post">
-                        <input type="hidden" name="controller" value="FrontPageFunctionController">
-                        <input type="hidden" name="action" value="sendContactRequest">
-
-                        <div class="row">
-                            <div class="col">
-                                <label>NAME - SURNAME</label>
-                                <input name="name" type="text" class="form-control form-control-lg" placeholder=""
-                                       required>
-                            </div>
-                            <div class="col">
-                                <label>EMAIL ADDRESSS</label>
-                                <input name="email" type="email" class="form-control form-control-lg" required>
+                    <div class="col-md-6 offset-md-1">
+                        <div class="fim-design-preview">
+                            <div class="fimdizayn-carousel owl-carousel">
+                                <div class="item"><img
+                                        src="{{asset('assets/uploads/fimdizayn-2-en.jpeg')}}"></div>
+                                <div class="item"><img
+                                        src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>
+                                <div class="item"><img
+                                        src="{{asset('assets/uploads/fimdizayn--en.jpeg')}}"></div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row pt-4">
-                            <div class="col">
-                                <label>PHONE NUMBER</label>
-                                <input name="phone_number" type="text" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="col">
-                                <label>COMPANY NAME</label>
-                                <input name="firm_name" type="text" class="form-control form-control-lg">
-                                <small>Not Required</small>
-                            </div>
-                        </div>
-
-                        <div class="form-group pt-4">
-                            <label for="exampleFormControlTextarea1">MESSAGE</label>
-                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" required
-                                      rows="3"></textarea>
-                        </div>
-                        <button id="submitButton" type="submit" class="btn btn-dark">SEND</button>
-                    </form>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="about">
+        <section class="zip-parts">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading primary">
+                            <h2>ZIPPER COMPONENTS</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="inner-section category-products">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-6 about-left">
-                            <div class="section-heading">
-                                <h2>ABOUT US</h2>
-                            </div>
-                            <div class="about-main-left">
-                                <h1>OPENS<br/>SHUTS <br/>PROTECTS</h1>
-                                <p>Fim Fermuar is a major zipper manufacturer with an average production number of
-                                    350.000
-                                    units
-                                    of 35 cm zippers per day. Most importantly, it is able to manufacture the zipper
-                                    sliders
-                                    which are rarely produced by the Turkish industry, by its own sources.Fim zipper can
-                                    export
-                                    over forthy countries with this ability.</p>
-                            </div>
+                        <div class="col-12">
+                            <h4 class="secondary mb-0 pb-0">ZIPPER</h4>
                         </div>
-                        <div class="col-12 col-md-6 about-right"><img class="img-fluid"
-                                                                      src="{{asset('assets/uploads/footer-image/about.jpg')}}"
-                                                                      alt=""/></div>
+                        <div class="col-12">
+                            <div class="category-product-carousel product-list owl-carousel">
+                                <div class="product-card">
+                                    <a href="/m2-dipli-gu-mu-s-dis">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="M2 CLOSED END SILVER TEETH " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M2 CLOSED END SILVER TEETH
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">M2-002</span>
+                                            <a href="/m2-dipli-gu-mu-s-dis" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m2-separe-gu-mu-s-dis">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="M2 OPEN END SILVER TEETH " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M2 OPEN END SILVER TEETH
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">M2-003</span>
+                                            <a href="/m2-separe-gu-mu-s-dis" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m2-x-tipi-gu-mu-s-dis">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="M2 X TYPE SILVER TEETH " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M2 X TYPE SILVER TEETH
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">M2-004</span>
+                                            <a href="/m2-x-tipi-gu-mu-s-dis" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m2-o-tipi-gu-mu-s-dis">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="M2 O TYPE SILVER TEETH " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M2 O TYPE SILVER TEETH
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">M2-001</span>
+                                            <a href="/m2-o-tipi-gu-mu-s-dis" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="/fermuar" class="button-link d-inline-block float-right mt-1 mt-md-5">view all
+                                <i
+                                    class="flaticon-right ml-2"></i></a>
+                        </div>
                     </div>
                 </div>
             </section>
+            <section class="inner-section category-products">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="secondary mb-0 pb-0">PULLERS</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="category-product-carousel product-list owl-carousel">
+                                <div class="product-card">
+                                    <a href="/fi-m-101">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 101" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 101
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">ELC-001</span>
+                                            <a href="/fi-m-101" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-310">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="FİM 310" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 310
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 310</span>
+                                            <a href="/fim-310" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-309">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 309" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 309
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 309</span>
+                                            <a href="/fim-309" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-308">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="FİM 308" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 308
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 308</span>
+                                            <a href="/fim-308" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-307">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 307" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 307
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 307</span>
+                                            <a href="/fim-307" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-306">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="FİM 306" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 306
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 306</span>
+                                            <a href="/fim-306" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fim-305">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 305" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 305
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">FİM 305</span>
+                                            <a href="/fim-305" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fi-m-102">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 102" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 102
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">ELC-002</span>
+                                            <a href="/fi-m-102" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fi-m-103">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="FİM 103" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 103
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">ELC-003</span>
+                                            <a href="/fi-m-103" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/fi-m-104">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="FİM 104" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            FİM 104
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">ELC-004</span>
+                                            <a href="/fi-m-104" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="/elcikler" class="button-link d-inline-block float-right mt-1 mt-md-5">view all
+                                <i
+                                    class="flaticon-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section category-products">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="secondary mb-0 pb-0">SLIDERS</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="category-product-carousel product-list owl-carousel">
+                                <div class="product-card">
+                                    <a href="/m8-otomatik">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="M8 AUTOLOCK" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M8 AUTOLOCK
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-042</span>
+                                            <a href="/m8-otomatik" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-yg-kibris-du-z">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product2.png')}}"
+                                                alt="N3 YG " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 YG
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-050</span>
+                                            <a href="/n3-yg-kibris-du-z" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-otomatik">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 AUTOLOCK" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 AUTOLOCK
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-049</span>
+                                            <a href="/n3-otomatik" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-mac-a">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 HANGER " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 HANGER
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-048</span>
+                                            <a href="/n3-mac-a" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-ko-pru">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 NON-LOCK" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 NON-LOCK
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-047</span>
+                                            <a href="/n3-ko-pru" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-kombi-go-ru-nu-m">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 ELIPTICAL " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 ELIPTICAL
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-046</span>
+                                            <a href="/n3-kombi-go-ru-nu-m" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-kanca">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 HOOK" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 HOOK
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-045</span>
+                                            <a href="/n3-kanca" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/n3-go-vde">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="N3 BODY" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            N3 BODY
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-044</span>
+                                            <a href="/n3-go-vde" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m15-go-vde">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="M15 BODY" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M15 BODY
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-043</span>
+                                            <a href="/m15-go-vde" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m5-mac-a">
+                                        <div class="img-holder">
+                                            <img
+                                                src="{{asset('assets/uploads/products/product.png')}}"
+                                                alt="M5 HANGER" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M5 HANGER
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">KRS-036</span>
+                                            <a href="/m5-mac-a" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="/kursorler" class="button-link d-inline-block float-right mt-1 mt-md-5">view
+                                all <i
+                                    class="flaticon-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section category-products">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="secondary mb-0 pb-0">KITS</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="category-product-carousel product-list owl-carousel">
+                                <div class="product-card">
+                                    <a href="/m4-kelebek-h-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/e72a846c738c269ad82e2e910afc0f1f-353.png"
+                                                alt="M4 KELEBEK H STOP" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M4 KELEBEK H STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-001</span>
+                                            <a href="/m4-kelebek-h-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m4-ust-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/319aca54598db2d96a49a04754d2f771-354.png"
+                                                alt="M4 TOP STOP " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M4 TOP STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-002</span>
+                                            <a href="/m4-ust-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m5-kelebek-h-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/1287f9530b09a17ef99fe811be26c189-355.png"
+                                                alt="M5 BUTTERFLY H STOP" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M5 BUTTERFLY H STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-003</span>
+                                            <a href="/m5-kelebek-h-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m5-n5-alt-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/f704a71e95c339952f0ead00bb5ce17a-357.png"
+                                                alt="M5-N5 BOTTOM STOP" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M5-N5 BOTTOM STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-005</span>
+                                            <a href="/m5-n5-alt-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m5-ust-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/0e2e4c1393744b059651b21c054f1e28-356.png"
+                                                alt="M5 TOP STOP" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M5 TOP STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-004</span>
+                                            <a href="/m5-ust-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/no-4-kapak-yay">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/0ba9419304754d4d28faf0806aec762c-359.png"
+                                                alt="NO 4 CUP-SPRING" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            NO 4 CUP-SPRING
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-007</span>
+                                            <a href="/no-4-kapak-yay" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/no-5-kapak-yay">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/a035dd90719202a046f081d273f92ed0-360.png"
+                                                alt="NO 5 CUP-SPRING" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            NO 5 CUP-SPRING
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-008</span>
+                                            <a href="/no-5-kapak-yay" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/no-8-kapak-yay">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/42bac264d48c7a95ab6d3b0fe0cfd81d-361.png"
+                                                alt="NO 8 CUP-SPRING" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            NO 8 CUP-SPRING
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-009</span>
+                                            <a href="/no-8-kapak-yay" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m8-kelebek-h-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/2bc20c1b1024e52cf049bd6e889d2d00-859.png"
+                                                alt="M8 BUTTERFLY H STOP " class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M8 BUTTERFLY H STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-010	</span>
+                                            <a href="/m8-kelebek-h-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-card">
+                                    <a href="/m15-kelebek-h-stop">
+                                        <div class="img-holder">
+                                            <img
+                                                src="/uploads/products/thumb/400x600/cb677613af466e72a4ec41fdabfe3042-358.png"
+                                                alt="M15 BUTTERFLY H STOP" class="img-fluid">
+                                        </div>
+                                        <div class="product-name">
+                                            M15 BUTTERFLY H STOP
+                                        </div>
+                                        <div class="product-bottom">
+                                            <span class="product-code">APRT-006</span>
+                                            <a href="/m15-kelebek-h-stop" class="button black size-sm">CHECK</a>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="/aparatlar" class="button-link d-inline-block float-right mt-1 mt-md-5">view
+                                all <i
+                                    class="flaticon-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="fairs">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading primary">
+                            <h2>FAIRS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md fair-item"><a
+                            href="/bursa-8-tekstil-aksesuarlari-trend-ve-inovasyon-etkinligi"> <img
+                                class="img-fluid"
+                                src="/uploads/editor/source/bursa-fair.jpg"
+                                alt="Bursa 8. Tekstil Aksesuarı Trend ve İnovasyon Fuarı"/>
+                        </a>
+                        <div>
+                            <h5 class="mt-2">Bursa</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item"><a href="/texhibition-istanbul-fuari"> <img
+                                class="img-fluid"
+                                src="/uploads/editor/source/texhibition.jpg"
+                                alt="Texhibition Fuarı"/>
+                        </a>
+                        <div>
+                            <h5 class="mt-2">İstanbul</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item"><a href="/uluslar-arasi-kahire-moda-ve-tekstil-fuari"> <img
+                                class="img-fluid" src="/uploads/editor/source/mısır.jpg" alt="Mısır Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">Mısır</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item"><a href="/rusya-ndash-intertex-fabric-textile-fuari"> <img
+                                class="img-fluid" src="/uploads/editor/source/rusya.jpg" alt="Rusya Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">Rusya</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item"><a href="/tunus-intertex-tunusia-sousse-fuari"> <img
+                                class="img-fluid" src="/uploads/editor/source/tunus.jpg" alt="Tunus Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">Tunus</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item"><a href="/polonya-nbsp-nbsp-innovetex-2014-tekstil-fuari">
+                            <img
+                                class="img-fluid" src="/uploads/editor/source/polonya.png" alt="Polonya Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">Polonya</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md fair-item mt-5"><a
+                            href="/sirbistan-nbsp-belgrad-balkan-textile-2018-fuari">
+                            <img class="img-fluid" src="/uploads/editor/source/sirbistan.jpg"
+                                 alt="Sırbistan Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">Sırbistan</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md fair-item mt-5"><a href="/istanbul-kysd-tekstil-ve-inovasyon-fuari">
+                            <img
+                                class="img-fluid" src="/uploads/editor/source/istanbul.jpg"
+                                alt="İstanbul Fuarı"/></a>
+                        <div>
+                            <h5 class="mt-2">İstanbul</h5>
+                        </div>
+                    </div>
+                    <div class="col-md">&nbsp;</div>
+                    <div class="col-md">&nbsp;</div>
+                    <div class="col-md">&nbsp;</div>
+                    <div class="col-md">&nbsp;</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="production">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading primary">
+                            <h2>PRODUCTION</h2>
+                        </div>
+                        <p>The number of hands employed to manufacture a zipper is as many as the resources required
+                            to
+                            be
+                            combined to produce it. A zipper can be produced with the cooperation of approximately
+                            27
+                            people. Both the heat and the coldness are used for the production process of a zipper
+                            which
+                            is
+                            manufactured from 5 different resources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="video">
+            <span class="play-button" data-toggle="modal" data-target=".video-modal"></span>
+            <img class="img-fluid" src="/assets/front-face/img/core-img/production/cover.jpg"
+                 alt="&Uuml;retim S&uuml;reci Videosu"/> <span data-toggle="modal"
+                                                               data-target=".video-modal"></span>
+        </section>
+        <div class="modal fade bd-example-modal-lg video-modal" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    {{--<video controls="controls">
+                        <source src="/assets/front-face/img/core-img/production/production.mp4" type="video/mp4"/>
+                    </video>--}}
+                </div>
+            </div>
         </div>
+        <section class="form">
+            <div class="container-fluid">
+                <div class="section-heading primary">
+                    <h2>REQUEST FORM</h2>
+                </div>
+                <form class="ajax-form" action="customerController" method="post">
+                    <input type="hidden" name="controller" value="FrontPageFunctionController">
+                    <input type="hidden" name="action" value="sendContactRequest">
+
+                    <div class="row">
+                        <div class="col">
+                            <label>NAME - SURNAME</label>
+                            <input name="name" type="text" class="form-control form-control-lg" placeholder=""
+                                   required>
+                        </div>
+                        <div class="col">
+                            <label>EMAIL ADDRESSS</label>
+                            <input name="email" type="email" class="form-control form-control-lg" required>
+                        </div>
+                    </div>
+
+                    <div class="row pt-4">
+                        <div class="col">
+                            <label>PHONE NUMBER</label>
+                            <input name="phone_number" type="text" class="form-control form-control-lg" required>
+                        </div>
+                        <div class="col">
+                            <label>COMPANY NAME</label>
+                            <input name="firm_name" type="text" class="form-control form-control-lg">
+                            <small>Not Required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <label for="exampleFormControlTextarea1">MESSAGE</label>
+                        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" required
+                                  rows="3"></textarea>
+                    </div>
+                    <button id="submitButton" type="submit" class="btn btn-dark">SEND</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6 about-left">
+                        <div class="section-heading">
+                            <h2>ABOUT US</h2>
+                        </div>
+                        <div class="about-main-left">
+                            <h1>OPENS<br/>SHUTS <br/>PROTECTS</h1>
+                            <p>Fim Fermuar is a major zipper manufacturer with an average production number of
+                                350.000
+                                units
+                                of 35 cm zippers per day. Most importantly, it is able to manufacture the zipper
+                                sliders
+                                which are rarely produced by the Turkish industry, by its own sources.Fim zipper can
+                                export
+                                over forthy countries with this ability.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 about-right"><img class="img-fluid"
+                                                                  src="{{asset('assets/uploads/footer-image/about.jpg')}}"
+                                                                  alt=""/></div>
+                </div>
+            </div>
+        </section>
     </main>
 @endsection
