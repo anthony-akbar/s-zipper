@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <h2 class="intro-y text-lg font-medium mt-5">Slider Images</h2>
-    <div id="Content" class="grid grid-cols-12 gap-6 mt-5">
+    <div class="grid grid-cols-12 gap-6 mt-5">
         @include('admin.slider.create')
         @if($sliders->isEmpty())
             <div class="pt-10 intro-y text-center">No elements to show!</div>
