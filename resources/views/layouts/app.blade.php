@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/front-face/css/style.min.css') }} "/>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/front-face/fonts/flaticon/font/flaticon.css') }} ">
     <link href="{{ asset('assets/front-face/vendor/jqvmap/dist/jqvmap.css') }}" media="screen" rel="stylesheet" type="text/css">
-
+        @yield('styles')
 </head>
 <body>
 
