@@ -24,8 +24,10 @@ return new class extends Migration
             $table->index('category_id', 'category_media_category_idx');
             $table->index('media_id', 'category_media_media_idx');
             //FK
-            $table->foreign('caregory_id', 'caregory_media_caregory_fk')->on('zipper_categories')->references('id');
-            $table->foreign('media_id', 'caregory_media_media_fk')->on('zipper_media')->references('id');
+            $table->foreign('category_id', 'category_media_category_fk')
+                ->on('zipper_categories')->references('id');
+            $table->foreign('media_id', 'category_media_media_fk')
+                ->on('zipper_media')->references('id');
         });
     }
 
