@@ -11,7 +11,7 @@
         <div class="modal-content">
             <div class="modal-body p-10 text-center">
 
-                <form method="POST" action="{{ route('admin.slider.store') }}" enctype="multipart/form-data">
+                <form class="dropzone" method="POST" action="{{ route('admin.slider.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div>
                         <div class="fallback">
@@ -32,3 +32,11 @@
 </div>
 <!-- END: Modal Content -->
 
+<script>
+    function change(event) {
+        for(let i=0; i<event.files.length; i++){
+            console.log(event.files[i])
+        }
+
+    }
+</script>
