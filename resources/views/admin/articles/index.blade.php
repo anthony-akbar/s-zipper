@@ -15,4 +15,5 @@
             <option selected>sell</option>
         </select>
     </div>
+
 @endsection

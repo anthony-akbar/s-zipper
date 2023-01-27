@@ -29,29 +29,5 @@
 <script src="{{ asset('assets/front-face/js/main-script.min.js') }}"></script>
 <script src="{{ asset('assets/front-face/vendor/toastr/toastr.min.js') }}"></script>
 <script src="{{ asset('assets/front-face/js/magic-ajax.js') }}"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        if ($("#vmap").length > 0) {
-            jQuery("#vmap").vectorMap({
-                map: "world_en",
-                backgroundColor: "white",
-                color: "#f3f3f3",
-                zoomOnScroll: true,
-                markersSelectable: false,
-                markersSelectableOne: false,
-                enableZoom: true,
-                onRegionClick: function (e) {
-                    e.preventDefault();
-                },
-                hoverColor: "#051548",
-                hoverOpacity: null,
-                normalizeFunction: "linear",
-                selectedColor: "#051548",
-                selectedRegions: ["TR", "KZ", "DK", "RO", "AE", "QA", "MK", "RS", "CS", "SN", "SE", "GH", "CZ", "JO", "LB", "BG", "SI", "AT", "FR", "UK", "GB", "DE", "NL", "RU", "IL", "CY", "GR", "GE", "AZ", "IQ", "EG", "BA", "XS", "LY", "DZ", "TN", "MA", "BY", "NG", "UA", "BG", "RO", "US", "UZ", "AL", "ML", "SE", "AT", "PL", "IT"],
-                showTooltip: true
-            });
-        }
-    });
-</script>
 </body>
 </html>

@@ -8,13 +8,16 @@ use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $sliders = SliderItem::all();
         return view('admin.slider.index', compact('sliders'));
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $data = $request->all();
+        dd($data);
         $data['image'] = Storage::put('/images', $request['image']);
         SliderItem::create($data);
         return redirect()->route('admin.slider');
