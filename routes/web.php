@@ -8,12 +8,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $sliders = \App\Models\SliderItem::all();
     $categories = \App\Models\ZipperCategory::all();
-    return view('dashboard.index', compact('sliders','categories'));
+    return view('front.index', compact('sliders', 'categories'));
+});
+
+Route::group(['prefix' => 'front', 'namespace' => 'front'], function () {
+   Route::get('/category-zipper', []);
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::get('/', function () {
-        return view('admin.dashboard');
+        return view('admin.front');
     })->name('admin.home');
     Route::group(['prefix' => 'slider'], function () {
         Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
