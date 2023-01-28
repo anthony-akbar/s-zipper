@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('zipper_categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('image');
             $table->timestamps();
             $table->softDeletes();
