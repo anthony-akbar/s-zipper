@@ -15,15 +15,20 @@ class CategoryController extends Controller
         return view('admin.categories.index', compact('categories'));
     }
 
-    public function create() {
-
-        return view('admin.categories.create');
-    }
-
     public function store(Request $request) {
         $data = $request->all();
         $data['image'] = Storage::put('/images', $data['image']);
         ZipperCategory::create($data);
         return redirect()->route('admin.categories');
+    }
+
+    public function destroy($id)
+    {
+        ZipperCategory::destroy($id);
+        return redirect()->route('admin.categories');
+    }
+
+    public function show($id) {
+        dd($id);
     }
 }

@@ -125,8 +125,7 @@
         <div class="main-slider-container">
             <div class="main-slider owl-carousel owl-loaded owl-drag">
                 <div class="owl-stage-outer">
-                    <div class="owl-stage"
-                         style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+                    <div class="owl-stage" style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
                         @foreach($sliders as $item)
                             <div class="owl-item">
                                 <a href="#">
@@ -434,12 +433,9 @@
                     <div class="col-md-6 offset-md-1">
                         <div class="fim-design-preview">
                             <div class="fimdizayn-carousel owl-carousel">
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn-2-en.jpeg')}}"></div>
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn--en.jpeg')}}"></div>
+                                <div class="item"><img src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>
+                                <div class="item"><img src="{{asset('assets/uploads/fimdizayn-2-en.jpg')}}"></div>
+                                <div class="item"><img src="{{asset('assets/uploads/fimdizayn-1-en.jpg')}}"></div>
                             </div>
                         </div>
                     </div>

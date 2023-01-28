@@ -108,15 +108,46 @@
                         <div class="text-slate-600 dark:text-slate-500 mt-5">{{ $category->description }}</div>
                     </div>
                     <div class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
-                        <a class="flex items-center text-primary mr-auto" href="javascript:;">
+                        <a class="flex items-center text-primary mr-auto" href="{{ route('admin.categories.show', $category->id) }}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="eye" data-lucide="eye" class="lucide lucide-eye w-4 h-4 mr-1"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Preview
                         </a>
-                        <a class="flex items-center mr-3" href="javascript:;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="check-square" data-lucide="check-square" class="lucide lucide-check-square w-4 h-4 mr-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg> Edit
-                        </a>
-                        <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="trash-2" data-lucide="trash-2" class="lucide lucide-trash-2 w-4 h-4 mr-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete
-                        </a>
+                        <!-- BEGIN: Modal Toggle -->
+                        <a href="javascript:;" data-tw-toggle="modal"
+                           data-tw-target="#delete-modal-preview-{{$category->id}}"
+                           class="flex items-center mr-auto text-danger">
+                            <i data-lucide="trash-2" class="px-1 text-danger"></i>
+                            Delete</a>
+                        <!-- END: Modal Toggle -->
+                        <!-- BEGIN: Modal Content -->
+                        <div id="delete-modal-preview-{{$category->id}}" class="modal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body p-0">
+                                        <div class="p-5 text-center">
+                                            <i data-lucide="x-circle"
+                                               class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                                            <div class="text-3xl mt-5">Are you sure?</div>
+                                            <div class="text-slate-500 mt-2">Do you really want to delete these
+                                                records? <br>This process cannot be undone.
+                                            </div>
+                                        </div>
+                                        <div class="px-5 pb-8 text-center">
+                                            <form action="{{ route('admin.categories.delete', $category->id) }}"
+                                                  method="post">
+                                                <button type="button" data-tw-dismiss="modal"
+                                                        class="btn btn-outline-secondary w-24 mr-1">Cancel
+                                                </button>
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-outline-danger w-24">Yes
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Modal Content -->
                     </div>
                 </div>
             </div>
