@@ -131,7 +131,7 @@
                             <div class="owl-item">
                                 <a href="#">
                                     <div class="item">
-                                        <img class="item"  src="{{ 'storage/' . $item->image }}"/>
+                                        <img class="item" src="{{ 'storage/' . $item->image }}"/>
                                     </div>
                                 </a>
                             </div>
@@ -160,75 +160,58 @@
                 </div>
             </section>
 
-
             <section class="inner-section mb-5">
                 <div class="container-fluid">
                     <div class="category-item row">
-                        <div class="col-md-7">
-                            <div class="category-card align-bottom">
-                                <a href="/metal-fermuarlar">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="METAL ZIPPERS" class="img-fluid">
-                                </a>
-                                <div class="card-content d-none">
+                        @foreach($categories as $category)
+                            <div class="col-md-7">
+                                <div class="category-card align-bottom">
                                     <a href="/metal-fermuarlar">
-                                        <h3 class="secondary">METAL ZIPPERS</h3>
+                                        <div
+                                            style="background-image: url({{'storage/'. $category->image }}); background-size: cover; background-position: center;"
+                                            class="thumb">
+                                            <img class="img-fluid" style="opacity: 0;"
+                                                 src="{{ asset('assets/uploads/zipper.jpeg') }}"
+                                                 alt="img">
+                                        </div>
                                     </a>
-                                    <div class="invisible-content">
-                                        <!--<h5 class="mb-4">POPULAR METAL ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                href="/m2-metal-fermuarlar">M2 METAL ZIPPERS</a></h6><h6
-                                            class="mb-3"><a
-                                                href="/m4-metal-fermuarlar">M4 METAL ZIPPERS</a></h6><h6
-                                            class="mb-3"><a
-                                                href="/m4-fimx-metal-fermuarlar">M4 FIMX METAL ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a href="/m5-metal-fermuarlar">M5 METAL ZIPPERS</a></h6>
-                                        <a href="/metal-fermuarlar" class="button-link d-inline-block mt-3">view all
-                                            <i
-                                                class="flaticon-right ml-2"></i></a>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-5 text-right pt-md-5">
-                            <div class="category-content">
-                                <a href="/metal-fermuarlar">
-                                    <h3>METAL ZIPPERS</h3>
-                                </a>
-                                <p>Metal zippers are a zipper type the teeth of which are produced from various
-                                    metal
-                                    resources. They have a structure which can endure every kind of challenging
-                                    conditions
-                                    and environments. Metal zippers are commonly used in jeans, leather, sportswear
-                                    and
-                                    similar industries.
-                                </p>
+                            <div class="col-md-5 text-right pt-md-5">
+                                <div class="category-content">
+                                    <a href="/metal-fermuarlar">
+                                        <h3>{{$category->title}}</h3>
+                                    </a>
+                                    <p>
+                                        {{$category->description}}
+                                    </p>
+                                </div>
+                                <div class="category-images">
+                                    <a class="fancybox-group" rel="zipCategory-24"
+                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
+                                        <img
+                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                            alt="METAL ZIPPERS" class="img-fluid">
+                                    </a>
+                                    <a class="fancybox-group" rel="zipCategory-24"
+                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
+                                        <img
+                                            src="{{asset('assets/uploads/zipper2.jpeg')}}"
+                                            alt="METAL ZIPPERS" class="img-fluid">
+                                    </a>
+                                    <a class="fancybox-group" rel="zipCategory-24"
+                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
+                                        <img
+                                            src="{{asset('assets/uploads/zipper3.jpeg')}}"
+                                            alt="METAL ZIPPERS" class="img-fluid">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="category-images">
-                                <a class="fancybox-group" rel="zipCategory-24"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="METAL ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-24"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper2.jpeg')}}"
-                                        alt="METAL ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-24"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper3.jpeg')}}"
-                                        alt="METAL ZIPPERS" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </section>
+
             <section class="inner-section mt-5 mb-5">
                 <div class="container-fluid">
                     <div class="category-item row">
@@ -272,29 +255,12 @@
                                         src="{{asset('assets/uploads/zipper.jpeg')}}"
                                         alt="DELRIN ZIPPERS" class="img-fluid">
                                 </a>
-                                <div class="card-content d-none">
-                                    <a href="/kemik-fermuarlar">
-                                        <h3 class="secondary">DELRIN ZIPPERS</h3>
-                                    </a>
-                                    <div class="invisible-content">
-                                        <!--<h5 class="mb-4">POPULAR DELRIN ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                href="/d3-kemik-fermuarlar">D3 DELRIN ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a
-                                                href="/d5-kemik-fermuarlar">D5 DELRIN ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a
-                                                href="/d10-kemik-fermuarlar">D10 DELRIN ZIPPERS</a></h6>
-                                        <a href="/kemik-fermuarlar" class="button-link d-inline-block mt-3">view all
-                                            <i
-                                                class="flaticon-right ml-2"></i></a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section class="inner-section mb-5">
                 <div class="container-fluid">
                     <div class="category-item row">
@@ -305,27 +271,6 @@
                                         src="{{asset('assets/uploads/zipper.jpeg')}}"
                                         alt="NYLON ZIPPERS" class="img-fluid">
                                 </a>
-                                <div class="card-content d-none">
-                                    <a href="/naylon-fermuarlar">
-                                        <h3 class="secondary">NYLON ZIPPERS</h3>
-                                    </a>
-                                    <div class="invisible-content">
-                                        <!--<h5 class="mb-4">POPULAR NYLON ZIPPERS</h5>--><h6 class="mb-3"><a
-                                                href="/n3-naylon-fermuarlar">N3 NYLON ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a
-                                                href="/n5-naylon-fermuarlar">N5 NYLON ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a
-                                                href="/n7-naylon-fermuarlar">N7 NYLON ZIPPERS</a></h6><h6
-                                            class="mb-3">
-                                            <a
-                                                href="/gizli-fermuar">INVISIBLE ZIPPERS</a></h6>
-                                        <a href="/naylon-fermuarlar" class="button-link d-inline-block mt-3">view
-                                            all <i
-                                                class="flaticon-right ml-2"></i></a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-md-5 text-right pt-md-5">
@@ -366,87 +311,50 @@
             </section>
         </section>
 
-        <section class="innovations">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-heading primary">
-                            <h2>INNOVATIONS</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="innovations-slider-container">
-                            <div class="slider-left">
-                                <h2>WE PRODUCE FORMULA-1 ZIPPERS</h2>
-                                <p>Fim Zipper's products are now in the racing pilot overalls of Formula 1, the
-                                    world's
-                                    most
-                                    expensive and most watched sports organization.</p>
-                                <a href="/formula1-fermuarlarini-uretiyoruz" class="button black size-sm">CHECK
-                                    NOW</a>
-                            </div>
-                            <div class="slider-right">
-                                <!--
-                                <div class="innovations-slider owl-carousel">
-                                    <div><img src="/uploads/blogs/thumb/800x500/cb506e10b5c983fafd04bfe93a922a27-1258.jpg" alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>						</div>
-                                -->
+        {{--        <section class="fim-design">--}}
+        {{--            <div class="container-fluid">--}}
+        {{--                <div class="row">--}}
+        {{--                    <div class="col-md-5">--}}
+        {{--                        <div class="fim-design-about">--}}
+        {{--                            <div class="fim-design-about">--}}
+        {{--                                <iframe class="mb-4" src="https://www.youtube.com/embed/q6-iDGFD40E?autoplay=1"--}}
+        {{--                                        frameborder="0" allowfullscreen="allowfullscreen"></iframe>--}}
+        {{--                                <div class="section-heading primary">--}}
+        {{--                                    <h2>FİM DİZAYN</h2>--}}
+        {{--                                </div>--}}
+        {{--                                <h2 class="firsth">HAVE YOU EVER</h2>--}}
+        {{--                                <h2 class="secondh">DESIGNED YOUR <span>OWN</span> ZIPPERS BEFORE?</h2>--}}
+        {{--                                <p>With the new project of Fim Fermuar, FimDizayn, you can design your own zippers--}}
+        {{--                                    and--}}
+        {{--                                    send--}}
+        {{--                                    it to us. We will manufacture it just as you want them to be!</p>--}}
+        {{--                                <strong> It is time to create your own zippers! </strong> <a class="button-link"--}}
+        {{--                                                                                             href="https://fimdizayn.com/en"--}}
+        {{--                                                                                             target="_blank"--}}
+        {{--                                                                                             rel="noopener">--}}
+        {{--                                    <img class="img-fluid"--}}
+        {{--                                         src="/assets/front-face/img/core-img/sections/fim-design/button.svg"/>--}}
+        {{--                                    <span>DESIGN IT</span> </a><a class="button black size-sm m-auto"--}}
+        {{--                                                                  href="https://fimdizayn.com/en" target="_blank"--}}
+        {{--                                                                  rel="noopener">DESIGN NOW</a></div>--}}
+        {{--                        </div>--}}
+        {{--                    </div>--}}
+        {{--                    <div class="col-md-6 offset-md-1">--}}
+        {{--                        <div class="fim-design-preview">--}}
+        {{--                            <div class="fimdizayn-carousel owl-carousel">--}}
+        {{--                                <div class="item"><img--}}
+        {{--                                        src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>--}}
+        {{--                                <div class="item"><img--}}
+        {{--                                        src="{{asset('assets/uploads/fimdizayn-2-en.jpg')}}"></div>--}}
+        {{--                                <div class="item"><img--}}
+        {{--                                        src="{{asset('assets/uploads/fimdizayn-1-en.jpg')}}"></div>--}}
+        {{--                            </div>--}}
+        {{--                        </div>--}}
+        {{--                    </div>--}}
 
-                                <div><img class="img-fluid w-100"
-                                          src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                          alt="WE PRODUCE FORMULA-1 ZIPPERS" class="img-fluid"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="fim-design">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="fim-design-about">
-                            <div class="fim-design-about">
-                                <iframe class="mb-4" src="https://www.youtube.com/embed/q6-iDGFD40E?autoplay=1"
-                                        frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                                <div class="section-heading primary">
-                                    <h2>FİM DİZAYN</h2>
-                                </div>
-                                <h2 class="firsth">HAVE YOU EVER</h2>
-                                <h2 class="secondh">DESIGNED YOUR <span>OWN</span> ZIPPERS BEFORE?</h2>
-                                <p>With the new project of Fim Fermuar, FimDizayn, you can design your own zippers
-                                    and
-                                    send
-                                    it to us. We will manufacture it just as you want them to be!</p>
-                                <strong> It is time to create your own zippers! </strong> <a class="button-link"
-                                                                                             href="https://fimdizayn.com/en"
-                                                                                             target="_blank"
-                                                                                             rel="noopener">
-                                    <img class="img-fluid"
-                                         src="/assets/front-face/img/core-img/sections/fim-design/button.svg"/>
-                                    <span>DESIGN IT</span> </a><a class="button black size-sm m-auto"
-                                                                  href="https://fimdizayn.com/en" target="_blank"
-                                                                  rel="noopener">DESIGN NOW</a></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 offset-md-1">
-                        <div class="fim-design-preview">
-                            <div class="fimdizayn-carousel owl-carousel">
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn-2-en.jpeg')}}"></div>
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn-3-en.jpeg')}}"></div>
-                                <div class="item"><img
-                                        src="{{asset('assets/uploads/fimdizayn--en.jpeg')}}"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        {{--                </div>--}}
+        {{--            </div>--}}
+        {{--        </section>--}}
 
         <section class="zip-parts">
             <div class="container-fluid">
