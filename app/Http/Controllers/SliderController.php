@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SliderRequest;
 use App\Models\SliderItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -20,6 +19,12 @@ class SliderController extends Controller
         $data = $request->all();
         $data['image'] = Storage::put('/images', $request['image']);
         SliderItem::create($data);
+        return redirect()->route('admin.slider');
+    }
+
+    public function destroy($id)
+    {
+        SliderItem::destroy($id);
         return redirect()->route('admin.slider');
     }
 }

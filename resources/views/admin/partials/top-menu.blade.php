@@ -9,8 +9,12 @@
         <!-- BEGIN: Breadcrumb -->
         <nav aria-label="breadcrumb" class="-intro-x mr-auto">
             <ol class="breadcrumb breadcrumb-light">
-                <li class="breadcrumb-item"><a href="#">Application</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                <?php
+                    $path = explode("/",request()->path());
+                    ?>
+                @foreach($path as $item)
+                    <li class="breadcrumb-item {{ $item == end($path) ? 'active' : ''}}" aria-current="page">{{ ucwords($item) }}</li>
+                @endforeach
             </ol>
         </nav>
         <!-- END: Breadcrumb -->
