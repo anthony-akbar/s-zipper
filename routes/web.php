@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $sliders = \App\Models\SliderItem::all();
-    $categories = \App\Models\ZipperCategory::all();
+    $categories = \App\Models\ZipperCategory::orderBy('created_at', 'desc')->paginate(3);
     return view('front.index', compact('sliders', 'categories'));
 });
 
