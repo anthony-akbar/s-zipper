@@ -163,10 +163,10 @@
                     </div>
                 </div>
             </section>
-                        <?php
-                        $items = true;
-                        ?>
-                        @foreach($categories as $category)
+            <?php
+            $items = true;
+            ?>
+            @foreach($categories as $category)
                 <section class="inner-section mb-5">
                     <div class="container-fluid">
                         <div class="category-item row">
@@ -1059,12 +1059,9 @@
                     <h2>REQUEST FORM</h2>
                 </div>
                 <form class="ajax-form" action="customerController" method="post">
-                    <input type="hidden" name="controller" value="FrontPageFunctionController">
-                    <input type="hidden" name="action" value="sendContactRequest">
-
                     <div class="row">
                         <div class="col">
-                            <label>NAME - SURNAME</label>
+                            <label>NAME</label>
                             <input name="name" type="text" class="form-control form-control-lg" placeholder=""
                                    required>
                         </div>
@@ -1077,12 +1074,12 @@
                     <div class="row pt-4">
                         <div class="col">
                             <label>PHONE NUMBER</label>
-                            <input name="phone_number" type="text" class="form-control form-control-lg" required>
+                            <input name="phone_number" type="text" class="form-control form-control-lg">
+                            <small>Not Required</small>
                         </div>
                         <div class="col">
                             <label>COMPANY NAME</label>
-                            <input name="firm_name" type="text" class="form-control form-control-lg">
-                            <small>Not Required</small>
+                            <input name="company_name" type="text" class="form-control form-control-lg" required>
                         </div>
                     </div>
 
