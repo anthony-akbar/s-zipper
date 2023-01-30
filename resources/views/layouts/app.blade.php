@@ -16,7 +16,7 @@
 <body>
 
 
-@include('partials.navbar')
+@include('front.partials.navbar')
 @yield('content')
 @include('front.partials.footer')
 <script type="text/javascript" src="{{ asset('assets/front-face/vendor/jqvmap/dist/jquery.vmap.js') }}"></script>

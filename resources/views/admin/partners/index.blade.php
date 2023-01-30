@@ -121,6 +121,9 @@
 {{--                            </svg>--}}
 {{--                            Preview--}}
 {{--                        </a>--}}
+
+                        @include('admin.partners.edit')
+
                         <!-- BEGIN: Modal Toggle -->
                         <a href="javascript:;" data-tw-toggle="modal"
                            data-tw-target="#delete-modal-preview-{{$partner->id}}"

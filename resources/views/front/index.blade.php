@@ -948,53 +948,24 @@
                 </div>
                 <div class="row">
                     @foreach($partners as $partner)
+
                         <div class="col-4 col-md fair-item">
-                            <a href="/bursa-8-tekstil-aksesuarlari-trend-ve-inovasyon-etkinligi">
-                                <img
-                                    class="img-fluid"
-                                    src="{{'storage/'. $partner->image }}"
-                                    alt="Texhibition Fuarı"/>
-                            </a>
-                            <div>
-                                <h5 class="mt-2">{{$partner->title}}</h5>
+                            <div class="mt-4">
+                                <a href="#" >
+                                    <div
+                                        style="background-image: url({{'storage/'. $partner->image }}); background-size: cover; background-position: center;">
+                                        <img class="img-fluid" style="opacity: 0;"
+                                             src="{{ asset('assets/uploads/texhibition.jpg') }}"
+                                             alt="img">
+                                    </div>
+                                </a>
+                                <div>
+                                    <h5 class="mt-2">{{$partner->title}}</h5>
+                                </div>
                             </div>
                         </div>
+
                     @endforeach
-                    <div class="col-4 col-md fair-item"><a href="/texhibition-istanbul-fuari">
-                            <img
-                                class="img-fluid"
-                                src="/uploads/editor/source/texhibition.jpg"
-                                alt="Texhibition Fuarı"/>
-                        </a>
-                        <div>
-                            <h5 class="mt-2">İstanbul</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md fair-item"><a href="/uluslar-arasi-kahire-moda-ve-tekstil-fuari"> <img
-                                class="img-fluid" src="/uploads/editor/source/mısır.jpg" alt="Mısır Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">Mısır</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md fair-item"><a href="/rusya-ndash-intertex-fabric-textile-fuari"> <img
-                                class="img-fluid" src="/uploads/editor/source/rusya.jpg" alt="Rusya Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">Rusya</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md fair-item"><a href="/tunus-intertex-tunusia-sousse-fuari"> <img
-                                class="img-fluid" src="/uploads/editor/source/tunus.jpg" alt="Tunus Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">Tunus</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md fair-item"><a href="/polonya-nbsp-nbsp-innovetex-2014-tekstil-fuari">
-                            <img
-                                class="img-fluid" src="/uploads/editor/source/polonya.png" alt="Polonya Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">Polonya</h5>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4 col-md fair-item mt-5"><a
@@ -1021,42 +992,6 @@
             </div>
         </section>
 
-        <section class="production">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-heading primary">
-                            <h2>PRODUCTION</h2>
-                        </div>
-                        <p>The number of hands employed to manufacture a zipper is as many as the resources required
-                            to
-                            be
-                            combined to produce it. A zipper can be produced with the cooperation of approximately
-                            27
-                            people. Both the heat and the coldness are used for the production process of a zipper
-                            which
-                            is
-                            manufactured from 5 different resources.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="video">
-            <span class="play-button" data-toggle="modal" data-target=".video-modal"></span>
-            <img class="img-fluid" src="/assets/front-face/img/core-img/production/cover.jpg"
-                 alt="&Uuml;retim S&uuml;reci Videosu"/> <span data-toggle="modal"
-                                                               data-target=".video-modal"></span>
-        </section>
-        <div class="modal fade bd-example-modal-lg video-modal" tabindex="-1" role="dialog"
-             aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    {{--<video controls="controls">
-                        <source src="/assets/front-face/img/core-img/production/production.mp4" type="video/mp4"/>
-                    </video>--}}
-                </div>
-            </div>
-        </div>
         <section class="form">
             <div class="container-fluid">
                 <div class="section-heading primary">
