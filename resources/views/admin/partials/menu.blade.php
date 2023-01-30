@@ -1,7 +1,8 @@
 <nav class="side-nav">
     <ul>
         <li>
-            <a href="{{ route('admin.home') }}" class="side-menu side-menu{{ request()->is("admin") ? "--active" : "" }}">
+            <a href="{{ route('admin.home') }}"
+               class="side-menu side-menu{{ request()->is("admin") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="home"></i></div>
                 <div class="side-menu__title">Dashboard</div>
             </a>
@@ -25,6 +26,13 @@
                class="side-menu side-menu{{ request()->is("admin/products") || request()->is("admin/products/*") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="camera"></i></div>
                 <div class="side-menu__title">Products</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('admin.partners') }}"
+               class="side-menu side-menu{{ request()->is("admin/partners") || request()->is("admin/partners/*") ? "--active" : "" }}">
+                <div class="side-menu__icon"><i data-lucide="briefcase"></i></div>
+                <div class="side-menu__title">Partners</div>
             </a>
         </li>
     </ul>

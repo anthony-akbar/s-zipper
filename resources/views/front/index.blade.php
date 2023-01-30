@@ -947,17 +947,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 col-md fair-item"><a
-                            href="/bursa-8-tekstil-aksesuarlari-trend-ve-inovasyon-etkinligi"> <img
-                                class="img-fluid"
-                                src="/uploads/editor/source/bursa-fair.jpg"
-                                alt="Bursa 8. Tekstil Aksesuarı Trend ve İnovasyon Fuarı"/>
-                        </a>
-                        <div>
-                            <h5 class="mt-2">Bursa</h5>
+                    @foreach($partners as $partner)
+                        <div class="col-4 col-md fair-item">
+                            <a href="/bursa-8-tekstil-aksesuarlari-trend-ve-inovasyon-etkinligi">
+                                <img
+                                    class="img-fluid"
+                                    src="{{'storage/'. $partner->image }}"
+                                    alt="Texhibition Fuarı"/>
+                            </a>
+                            <div>
+                                <h5 class="mt-2">{{$partner->title}}</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-md fair-item"><a href="/texhibition-istanbul-fuari"> <img
+                    @endforeach
+                    <div class="col-4 col-md fair-item"><a href="/texhibition-istanbul-fuari">
+                            <img
                                 class="img-fluid"
                                 src="/uploads/editor/source/texhibition.jpg"
                                 alt="Texhibition Fuarı"/>
@@ -1113,9 +1117,11 @@
                                 over forthy countries with this ability.</p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 about-right"><img class="img-fluid"
-                                                                  src="{{asset('assets/uploads/footer-image/about.jpg')}}"
-                                                                  alt=""/></div>
+                    <div class="col-12 col-md-6 about-right">
+                        <img class="img-fluid"
+                             src="{{asset('assets/uploads/footer-image/about.jpg')}}"
+                             alt=""/>
+                    </div>
                 </div>
             </div>
         </section>
