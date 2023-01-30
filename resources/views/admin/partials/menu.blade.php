@@ -15,6 +15,50 @@
             </a>
         </li>
         <li>
+            <a href="javascript:;" class="side-menu side-menu{{ request()->is("admin/zipper/") || request()->is("admin/zipper/*") ? "--active" : "" }}">
+                <div class="side-menu__icon">
+                    <img style="width: 24px; height: 24px;" src="{{ asset('zipper.svg') }}"/>
+                </div>
+                <div class="side-menu__title">
+                    Zipper
+                    <div class="side-menu__sub-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" icon-name="chevron-down" data-lucide="chevron-down" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </div>
+            </a>
+            <ul class="{{ request()->is("admin/zipper/") || request()->is("admin/zipper/*") ? "side-menu__sub-open" : "" }}" {{ request()->is("admin/zipper/") || request()->is("admin/zipper/*") ? 'style="display: none;"' : "" }}>
+                <li>
+                    <a href="#" class="side-menu">
+                        <div class="side-menu__icon">
+                        </div>
+                        <div class="side-menu__title">
+                            Zippers
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.zipper.puller') }}" class="side-menu">
+                        <div class="side-menu__icon">
+                            {{--ICON--}}
+                        </div>
+                        <div class="side-menu__title">
+                            Pullers
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.zipper.slider') }}" class="side-menu">
+                        <div class="side-menu__icon">
+                            {{--ICON--}}
+                        </div>
+                        <div class="side-menu__title">
+                            Sliders
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
             <a href="{{ route('admin.categories') }}"
                class="side-menu side-menu{{ request()->is("admin/categories") || request()->is("admin/categories/*") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="image"></i></div>

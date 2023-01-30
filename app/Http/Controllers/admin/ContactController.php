@@ -15,4 +15,8 @@ class ContactController extends Controller
         return redirect()->back();
     }
 
+    public function index() {
+        return view('admin.contact.index');
+    }
+
 }

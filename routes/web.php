@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\PartnerAdminController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\front\PartnerFrontController;
 use App\Http\Controllers\front\ZipperCategoryController;
+use App\Http\Controllers\PullerController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\Zipper\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::get('/', function () {
         return view('layouts.admin');
     })->name('admin.home');
+    Route::group(['prefix'=>'zipper'], function () {
+        Route::get('/', [])->name('admin.zipper');
+        Route::group(['prefix'=>'puller'], function () {
+            Route::get('/', [PullerController::class, 'index'])->name('admin.zipper.puller');
+        });
+        Route::group(['prefix'=>'slider'], function () {
+            Route::get('/', [SliderController::class, 'index'])->name('admin.zipper.slider');
+        });
+    });
     Route::group(['prefix' => 'slider'], function () {
         Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
         Route::post('/store', [SliderController::class, 'store'])->name('admin.slider.store');
@@ -54,5 +64,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
         Route::post('/{id}/edit', [PartnerAdminController::class, 'edit'])->name('admin.partners.edit');
         Route::delete('/{id}', [PartnerAdminController::class, 'destroy'])->name('admin.partners.delete');
 
+    });
+    Route::group(['prefix'=>'contacts'], function () {
+        Route::get('/', [ContactController::class, 'index'])->name('admin.contacts');
     });
 });

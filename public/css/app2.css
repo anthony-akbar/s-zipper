@@ -4289,7 +4289,7 @@ select{
 }
 /* Default dark-mode colors */
 .dark {
-    --color-primary: 21 94 117;
+    --color-primary: 255 255 255;
     --color-slate-500: 148 163 184;
     --color-darkmode-50: 87 103 132;
     --color-darkmode-100: 74 90 121;
@@ -4316,6 +4316,11 @@ select{
 }
 .theme-1.dark {
     --color-primary: 29 78 216;
+}
+theme-4.dark{
+
+    --color-primary: 255 255 255;
+    --color-danger: 255 255 255;
 }
 /* Theme 2 colors */
 .theme-2 {
