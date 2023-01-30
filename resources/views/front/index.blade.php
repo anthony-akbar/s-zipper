@@ -130,8 +130,12 @@
                         @foreach($sliders as $item)
                             <div class="owl-item">
                                 <a href="#">
-                                    <div class="item">
-                                        <img class="item" src="{{ 'storage/' . $item->image }}"/>
+                                    <div
+                                        style="background-image: url({{'storage/'. $item->image }}); background-size: cover; background-position: center;"
+                                        class="item thumb">
+                                        <img class="item" style="opacity: 0;"
+                                             src="{{ asset('assets/uploads/zipper.jpeg') }}"
+                                             alt="img">
                                     </div>
                                 </a>
                             </div>
@@ -160,155 +164,113 @@
                 </div>
             </section>
 
-            <section class="inner-section mb-5">
-                <div class="container-fluid">
-                    <div class="category-item row">
+
+                        <?php
+                        $items = true;
+                        ?>
                         @foreach($categories as $category)
-                            <div class="col-md-7">
-                                <div class="category-card align-bottom">
-                                    <a href="/metal-fermuarlar">
-                                        <div
-                                            style="background-image: url({{'storage/'. $category->image }}); background-size: cover; background-position: center;"
-                                            class="thumb">
-                                            <img class="img-fluid" style="opacity: 0;"
-                                                 src="{{ asset('assets/uploads/zipper.jpeg') }}"
-                                                 alt="img">
-                                        </div>
-                                    </a>
+                <section class="inner-section mb-5">
+                    <div class="container-fluid">
+                        <div class="category-item row">
+                            @if($items)
+                                <div class="col-md-7 ">
+                                    <div class="category-card align-bottom">
+                                        <a href="{{route('front.zipper-category')}}">
+                                            <div
+                                                style="background-image: url({{'storage/'. $category->image }}); background-size: cover; background-position: center;"
+                                                class="thumb">
+                                                <img class="img-fluid" style="opacity: 0;"
+                                                     src="{{ asset('assets/uploads/zipper.jpeg') }}"
+                                                     alt="img">
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-5 text-right pt-md-5">
-                                <div class="category-content">
-                                    <a href="/metal-fermuarlar">
-                                        <h3>{{$category->title}}</h3>
-                                    </a>
-                                    <p>
-                                        {{$category->description}}
-                                    </p>
+                                <div class="col-md-5 pt-md-5 text-right">
+                                    <div class="category-content">
+                                        <a href="/metal-fermuarlar">
+                                            <h3>{{$category->title}}</h3>
+                                        </a>
+                                        <p>
+                                            {{$category->description}}
+                                        </p>
+                                    </div>
+                                    <div class="category-images">
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper2.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper3.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="category-images">
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper2.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
-                                    <a class="fancybox-group" rel="zipCategory-24"
-                                       href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
-                                        <img
-                                            src="{{asset('assets/uploads/zipper3.jpeg')}}"
-                                            alt="METAL ZIPPERS" class="img-fluid">
-                                    </a>
+                                    <?php
+                                    $items = false;
+                                    ?>
+                            @else
+                                <div class="col-md-5 pt-md-5">
+                                    <div class="category-content">
+                                        <a href="/metal-fermuarlar">
+                                            <h3>{{$category->title}}</h3>
+                                        </a>
+                                        <p>
+                                            {{$category->description}}
+                                        </p>
+                                    </div>
+                                    <div class="category-images">
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/449396af25b24ab58a0a05df9f45e116-665.jpg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5e9b73ad8ef5d8011e1b4d69549a3513-1135.jpg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper2.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                        <a class="fancybox-group" rel="zipCategory-24"
+                                           href="https://fimfermuar.com/uploads/categories/thumb/1200x800/b385cbf7fb8a571d218cdc6e2b2b79ec-1136.jpeg">
+                                            <img
+                                                src="{{asset('assets/uploads/zipper3.jpeg')}}"
+                                                alt="METAL ZIPPERS" class="img-fluid">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </section>
-
-            <section class="inner-section mt-5 mb-5">
-                <div class="container-fluid">
-                    <div class="category-item row">
-                        <div class="col-md-5 pt-md-5">
-                            <div class="category-content">
-                                <a href="/kemik-fermuarlar">
-                                    <h3>DELRIN ZIPPERS</h3>
-                                </a>
-                                <p>Delrin zippers are a zipper type made by injecting polyacetal material into the
-                                    zipper
-                                    lines. The usage fields of delrin teethed zippers are usually clothes such as
-                                    coats,
-                                    jackets, raincoats, tracksuits.
-                                </p>
-                            </div>
-                            <div class="category-images">
-                                <a class="fancybox-group" rel="zipCategory-23"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5ebac69ec7fa20848435c76c51f34bc5-664.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="DELRIN ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-23"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/97134d8651f3bf317566fa040fc18578-673.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="DELRIN ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-23"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/c4cfbb688297013bf83ba50f50e59713-674.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="DELRIN ZIPPERS" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="category-card align-bottom">
-                                <a href="/kemik-fermuarlar">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="DELRIN ZIPPERS" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="inner-section mb-5">
-                <div class="container-fluid">
-                    <div class="category-item row">
-                        <div class="col-md-7">
-                            <div class="category-card align-bottom">
-                                <a href="/naylon-fermuarlar">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="NYLON ZIPPERS" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-5 text-right pt-md-5">
-                            <div class="category-content">
-                                <a href="/naylon-fermuarlar">
-                                    <h3>NYLON ZIPPERS</h3>
-                                </a>
-                                <p>Nylon zippers are a zipper type the teeth of which are produced by using spiral
-                                    nylon
-                                    monofilament material. Nylon zippers are especially used for babies’ wear,
-                                    children’s
-                                    wear and women’s wear.
-                                </p>
-                            </div>
-                            <div class="category-images">
-                                <a class="fancybox-group" rel="zipCategory-25"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/12f37c568556ede835bd05dd54a90936-666.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="NYLON ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-25"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/31638223a056facdd004df3c632fbdb4-672.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="NYLON ZIPPERS" class="img-fluid">
-                                </a>
-                                <a class="fancybox-group" rel="zipCategory-25"
-                                   href="https://fimfermuar.com/uploads/categories/thumb/1200x800/5647cf3ac39431b3dff67185ee3bfd4d-671.jpg">
-                                    <img
-                                        src="{{asset('assets/uploads/zipper.jpeg')}}"
-                                        alt="NYLON ZIPPERS" class="img-fluid">
-                                </a>
-                            </div>
+                                <div class="col-md-7">
+                                    <div class="category-card align-bottom">
+                                        <a href="{{route('front.zipper-category')}}">
+                                            <div
+                                                style="background-image: url({{'storage/'. $category->image }}); background-size: cover; background-position: center;"
+                                                class="thumb">
+                                                <img class="img-fluid" style="opacity: 0;"
+                                                     src="{{ asset('assets/uploads/zipper.jpeg') }}"
+                                                     alt="img">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                    <?php
+                                    $items = true;
+                                    ?>
+                            @endif
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            @endforeach
         </section>
 
         {{--        <section class="fim-design">--}}

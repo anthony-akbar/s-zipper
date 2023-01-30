@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\front\ZipperCategoryController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\Zipper\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -12,12 +13,12 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'front', 'namespace' => 'front'], function () {
-   Route::get('/category-zipper', []);
+    Route::get('/category-zipper', [ZipperCategoryController::class, 'index'])->name('front.zipper-category');
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::get('/', function () {
-        return view('admin.front');
+        return view('layouts.admin');
     })->name('admin.home');
     Route::group(['prefix' => 'slider'], function () {
         Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
