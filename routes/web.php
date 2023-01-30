@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\ContactController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\front\ZipperCategoryController;
 use App\Http\Controllers\SliderController;
@@ -14,6 +15,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'front', 'namespace' => 'front'], function () {
     Route::get('/category-zipper', [ZipperCategoryController::class, 'index'])->name('front.zipper-category');
+    Route::group(['prefix' => 'contact'], function () {
+        Route::post('/store', [ContactController::class, 'store'])->name('front.contact.store');
+    });
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {

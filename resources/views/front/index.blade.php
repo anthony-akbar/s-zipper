@@ -1058,7 +1058,8 @@
                 <div class="section-heading primary">
                     <h2>REQUEST FORM</h2>
                 </div>
-                <form class="ajax-form" action="customerController" method="post">
+                <form action="{{route('front.contact.store')}}" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col">
                             <label>NAME</label>
@@ -1073,7 +1074,7 @@
 
                     <div class="row pt-4">
                         <div class="col">
-                            <label>PHONE NUMBER</label>
+                            <label>Phone Number</label>
                             <input name="phone_number" type="text" class="form-control form-control-lg">
                             <small>Not Required</small>
                         </div>
@@ -1088,7 +1089,7 @@
                         <textarea name="message" class="form-control" id="exampleFormControlTextarea1" required
                                   rows="3"></textarea>
                     </div>
-                    <button id="submitButton" type="submit" class="btn btn-dark">SEND</button>
+                    <button type="submit" class="btn btn-dark">SEND</button>
                 </form>
             </div>
         </section>
