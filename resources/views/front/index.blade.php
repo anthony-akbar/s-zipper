@@ -967,28 +967,6 @@
 
                     @endforeach
                 </div>
-                <div class="row">
-                    <div class="col-4 col-md fair-item mt-5"><a
-                            href="/sirbistan-nbsp-belgrad-balkan-textile-2018-fuari">
-                            <img class="img-fluid" src="/uploads/editor/source/sirbistan.jpg"
-                                 alt="Sırbistan Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">Sırbistan</h5>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md fair-item mt-5"><a href="/istanbul-kysd-tekstil-ve-inovasyon-fuari">
-                            <img
-                                class="img-fluid" src="/uploads/editor/source/istanbul.jpg"
-                                alt="İstanbul Fuarı"/></a>
-                        <div>
-                            <h5 class="mt-2">İstanbul</h5>
-                        </div>
-                    </div>
-                    <div class="col-md">&nbsp;</div>
-                    <div class="col-md">&nbsp;</div>
-                    <div class="col-md">&nbsp;</div>
-                    <div class="col-md">&nbsp;</div>
-                </div>
             </div>
         </section>
 
